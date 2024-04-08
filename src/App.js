@@ -5,8 +5,9 @@ import Movie from './Component/Movie';
 import Home from './Component/Home';
 import Empployee from './Component/Employee';
 import Login from './Component/Login';
+import ImageGame from './Component/ImageGame';
 import "react-toastify/dist/ReactToastify.css";
-import { ToastClassName, ToastContainer } from 'react-toastify';
+import {  ToastContainer } from 'react-toastify';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/home' element={<Home/>}/>
         <Route path='/emp' element={<Empployee/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/image' element={<ImageGame/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

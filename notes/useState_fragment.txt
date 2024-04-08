@@ -1,0 +1,12 @@
+hook are pre built function present in react functional componet they can be used to manage state and to perfrom various effects
+example useEffect,useState,useParam etc.
+a hook can to to called inside a function it can only be called inside functional component or custome hook
+
+useState------------------------------
+useState is used to manage and update states it takes a state an array with two elements a state name and a function to update the state it also returns the intial value init self
+
+fragment types
+
+<></>
+<Fragment></Fragment>
+<Reacr.Fragment></React.Fragment>

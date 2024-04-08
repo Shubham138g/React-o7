@@ -1,0 +1,20 @@
+download the template from w3layouts,bootstrapmade,themeswagon or template monstor also check 
+the version of bootstrap bty clickingon view page source,check for jquery and check that 
+the template is multi page.
+2.once you have found the template download it and extract it.
+3.in the template there will be some folder copy them and paste them in public folder under assest
+folder.
+4.now open html file expect index.html
+5.copy the code present in the body except link or script and paste in your component
+6,you will find erros to remove them use jsx converter.
+7.copy all the link and script from html page and paste in index.html do not forget to add
+/assest/
+
+
+
+---------------------------------------routing
+1.browerRouter:-this provide cleanest URL path and passing in all the routing onformation
+from one component to another.
+2.Routes:-This checks the child for the given path and returns the first matching child with the 
+given path.
+3.Route:-its coupls path and element.

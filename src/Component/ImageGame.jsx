@@ -4,14 +4,17 @@ import { toast } from "react-toastify";
 export default function ImageGame() {
   const [number, setNumber] = useState("");
   const [result, setResult] = useState("Play");
+  const [rNum, setRNUm] = useState(null);
+
+
   const handleInput = (e) => {
     setNumber(e.target.value);
   };
-  const checkNumber = () => {
+  // const checkNumber = () => {
     if (number <= 1 || number > 5) {
       toast("number is not vaild");
     }
-  };
+  // };
   const URL = [
     "/image/1.jpg",
     "/image/2.jpg",
@@ -19,6 +22,22 @@ export default function ImageGame() {
     "/image/4.jpg",
     "/image/5.jpg",
   ];
+  
+  
+  function gen(){
+    let randNum = Math.floor((Math.random() * 5) + 1)
+    setRNUm(randNum);
+    console.log(rNum);
+  }
+
+const checkImg=(index)=>{
+  if(index==rNum-1){
+    toast("You win");
+  }
+  else{
+    toast("You Lose");
+  }
+}    
 
   return (
     <Fragment>
@@ -32,23 +51,27 @@ export default function ImageGame() {
           onChange={handleInput}
           min={2}
           max={5}
+          onKeyDownCapture={gen}
         />
-        <button
-          type="submit"
-          onClick={checkNumber}
-          className="ms-3 px-3 bg-dark text-light"
-        >
-          Enter
-        </button>
+  
         <div className="mt-2">
           <small className="text-danger">
             Please choose number between 2 to 5
           </small>
         </div>
+ 
+        
+         <div className="row" >
+          {rNum !== null && (
+            <div className="col-12 text-center my-5">
+              <img width="250px" id="mainImg" src={URL[rNum - 1]}/>
+            </div>
+          )}
+        </div>
         <div className="row">
-          {URL.map((pic, index) => (
+          {number >= 2 && URL.slice(0, number).map((pic, index) => (
             <div className="col-3 my-5">
-              <img width="250px" key={index} src={pic} alt={`Image ${index + 1}`} />
+              <img width="250px" id={index} onClick={()=>{checkImg(index)}} key={index} src={pic} alt={`Image ${index + 1}`} />
             </div>  
           ))}
         </div>

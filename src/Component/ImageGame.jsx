@@ -10,11 +10,11 @@ export default function ImageGame() {
   const handleInput = (e) => {
     setNumber(e.target.value);
   };
-  // const checkNumber = () => {
+  
     if (number <= 1 || number > 5) {
       toast("number is not vaild");
     }
-  // };
+
   const URL = [
     "/image/1.jpg",
     "/image/2.jpg",

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function FormHook() {
   const { register, handleSubmit,formState:{errors} } = useForm();
@@ -15,6 +16,7 @@ export default function FormHook() {
   //   };
   const handleForm = (data) => {
     console.log(data);
+    toast.success("data added successfully");
   };
 
   const handleError = (errors) => {
@@ -38,9 +40,9 @@ export default function FormHook() {
         {errors.password && errors.password?.type=="maxLength"?<span className="text-danger">*Password Should be lesss then 10 character</span>:""}
         <br />
         <label htmlFor="">Phone:</label>
-        <input {...register("phone",{required:true,minLengthLength:10})} />
+        <input {...register("phone",{required:true,maxLength:10})} />
         {errors.phone && errors.phone?.type=="required"?<span className="text-danger"> *This is required</span>:""}
-        {errors.phone && errors.phone?.type=="minLength"?<span className="text-danger">*Phone Should be 10 character</span>:""}
+        {errors.phone && errors.phone?.type=="maxLength"?<span className="text-danger">*Phone Should be 10 character</span>:""}
         <br />
         <button>submit</button>
       </form>

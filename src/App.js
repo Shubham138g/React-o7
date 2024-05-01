@@ -8,6 +8,7 @@ import Login from './Component/Login';
 import ImageGame from './Component/ImageGame';
 import "react-toastify/dist/ReactToastify.css";
 import {  ToastContainer } from 'react-toastify';
+import FormHook from './Component/FormHook';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/emp' element={<Empployee/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/image' element={<ImageGame/>}/>
+        <Route path='/form' element={<FormHook/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

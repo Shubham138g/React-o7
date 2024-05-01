@@ -5,15 +5,7 @@ import { toast } from "react-toastify";
 
 export default function FormHook() {
   const { register, handleSubmit,formState:{errors} } = useForm();
-  //   const handleForm = (data) => {
-  //     console.log(data);
-  //     try {
-  //         axios.post("http://localhost:3000/form", data);
-  //         res.status(200).json("api is running successfull", data);
-  //       } catch (error) {
-  //         res.status(400).json({ message: error.message });
-  //       }
-  //   };
+
   const handleForm = (data) => {
     console.log(data);
     toast.success("data added successfully");
@@ -49,3 +41,4 @@ export default function FormHook() {
     </>
   );
 }
+

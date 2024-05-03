@@ -23,12 +23,9 @@ export default function Tourist() {
         </div>
       </div>
             </div>
-          
-            </>
-           
+            </>   
         )
-    })}
-      
+    })}   
     </>
   );
 }

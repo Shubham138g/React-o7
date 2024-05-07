@@ -9,6 +9,7 @@ import ImageGame from './Component/ImageGame';
 import "react-toastify/dist/ReactToastify.css";
 import {  ToastContainer } from 'react-toastify';
 import FormHook from './Component/FormHook';
+import SubCat from './Component/SubCat';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/image' element={<ImageGame/>}/>
         <Route path='/form' element={<FormHook/>}/>
+        <Route path='/subcat' element={<SubCat/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

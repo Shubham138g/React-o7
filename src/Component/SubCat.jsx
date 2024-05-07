@@ -33,8 +33,12 @@ export default function SubCat() {
 
   // sub category
   useEffect(() => {
+    if(!!catId){
+    let data={
+        categoryId:catId
+    }
     axios
-      .post("https://kizaapi.ksesystem.com/api/subcategory/all")
+      .post("https://kizaapi.ksesystem.com/api/subcategory/all",data)
       .then((response) => {
         console.log(response.data.data);
         setSubData(response.data.data);
@@ -42,7 +46,8 @@ export default function SubCat() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    }
+  }, [catId]);
 
   return (
     <>

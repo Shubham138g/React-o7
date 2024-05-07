@@ -20,8 +20,9 @@ export default function SubCat() {
   };
   //Category
   useEffect(() => {
+    let data={status:true}
     axios
-      .post("https://kizaapi.ksesystem.com/api/category/all")
+      .post("https://kizaapi.ksesystem.com/api/category/all",data)
       .then((response) => {
         // console.log(response.data.data);
         setData(response.data.data);
